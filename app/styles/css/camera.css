@@ -23,7 +23,7 @@
 .screenPhoto {
   width: 100%;
   height: 100%;
-  background-image: url(../img/screenshot3.jpg);
+  background-image: url(../img/screenshot.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0% 50%;
@@ -151,7 +151,7 @@
   position: absolute;
   left: 0%;
   bottom: 0%;
-  background-image: url(../img/screenshot3.jpg);
+  background-image: url(../img/screenshot.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
