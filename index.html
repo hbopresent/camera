@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Camera</title>
+    <link rel="stylesheet" href="app/styles/css/normalize.css"/>
+    <link rel="stylesheet" href="app/styles/css/main.css"/>
+    <link rel="stylesheet" href="app/styles/css/camera.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="iphone">
+        <div class="iphone--screen">
+          <header class="screen--header" style="display:none">
+            <div class="signal">
+              <span class="signal--power"></span>
+              <span class="signal--power"></span>
+              <span class="signal--power"></span>
+              <span class="signal--power"></span>
+              <span class="signal--power"></span>
+            </div>
+            <div class="serviceProvider">中華電信</div>
+            <div class="signalType">4G</div>
+            <div class="time">
+              <input type="text" class="day" value="上午"/>
+              <input type="text" class="hour" value="9"/>
+              <span>:</span>
+              <input type="text" class="minute"  id="timeMinute" value="38"/>
+            </div>
+            <input type="text" class="powerLeft" value="80%"/>
+            <div class="power">
+              <div class="power--body"></div>
+              <div class="power--head"></div>
+            </div>
+          </header>
+          <!-- camera view -->
+          <div class="screen--view" id="firstFilm">
+            <div class="camera">
+              <div class="camera__flashLight" id="flashLight">
+                <svg class="camera__flashLightSvg">
+                  <path class="cameraSvg" d="M12 2 L5 15 L15 13 L8 28"></path>
+                </svg>
+              </div>
+              <div class="camera__switchEye" id="switchEye">
+                <svg class="camera__switchEyeSvg switchEyeSvg1">
+                  <path class="cameraSvg" d="M15 2 A10 10 0 0 0 15 22 L15 22"></path>
+                  <path class="cameraSvg fillSvg" d="M16 20 L18 22 L16 24 Z"></path>
+                </svg>
+                <svg class="camera__switchEyeSvg switchEyeSvg2">
+                  <path class="cameraSvg" d="M15 2 A10 10 0 0 0 15 22 L15 22"></path>
+                  <path class="cameraSvg fillSvg" d="M16 20 L18 22 L16 24 Z"></path>
+                </svg>
+              </div>
+              <div class="screenPhoto" id="screenPhoto"></div>
+              <div class="camera__snapshot" id="snapshot">
+                <div class="camera__snapshot__center"></div>
+              </div>
+              <div class="camera__photo" id="photo"></div>
+            </div>
+          </div>
+        </div>
+        <div class="iphone--earphone"></div>
+        <div class="iphone--camera"></div>
+        <div class="iphone--homeButton"></div>
+      </div>
+    </div>
+    <script src="app/script/js/camera.js"></script>
+  </body>
+</html>

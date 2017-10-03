@@ -1,0 +1,204 @@
+/***********************************\
+  $CAMERA
+\***********************************/
+.camera {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+.cameraSvg {
+  stroke: rgba(225, 225, 225, 0.5);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: miter;
+  fill: transparent;
+}
+
+
+
+
+/***********************************\
+  $SCREEN SHOT
+\***********************************/
+.screenPhoto {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/screenshot.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 50%;
+  filter: brightness(260%) contrast(130%);
+  opacity: 0;
+  transition: opacity 1s linear;
+  /*animation: moveScreenPhoto 2s 1.5s linear forwards;*/
+}
+@keyframes moveScreenPhoto {
+  0% {
+    background-position: 0% 50%;
+  }
+  66% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+@keyframes takeShot {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+
+
+
+
+/***********************************\
+  $FLASHLIGHT
+\***********************************/
+.camera__flashLight {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 15px;
+  top: 28px;
+  z-index: 2;
+  transform-origin: center;
+  transform: scale(0);
+  /*animation: showComponents 0.3s ease-out forwards;*/
+}
+    .camera__flashLightSvg {
+      width: 100%;
+      height: 100%;
+    }
+
+
+
+
+/***********************************\
+  $SWITCHEYE
+\***********************************/
+.camera__switchEye {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 34px;
+  z-index: 2;
+  transform-origin: center;
+  transform: scale(0);
+  /*animation: showComponents 0.3s 0.1s ease-out forwards;*/
+}
+    .camera__switchEyeSvg {
+      width: 100%;
+      height: 100%;
+    }
+    .switchEyeSvg1 {
+      transform-origin: center;
+      transform: rotateZ(-10deg);
+    }
+    .switchEyeSvg2 {
+      position: absolute;
+      transform-origin: center;
+      transform: rotateZ(172deg);
+      top: -18%;
+      right: -29%;
+    }
+
+
+
+
+/***********************************\
+  $SNAPSHOT
+\***********************************/
+.camera__snapshot {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  position: absolute;
+  bottom: 20px;
+  right: calc((100% - 45px)/2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transform-origin: center;
+  transform: scale(0);
+  /*animation: showComponents 0.3s 0.2s ease-out forwards;*/
+}
+    .camera__snapshot__center {
+      width: 41px;
+      height: 41px;
+      border-radius: 50%;
+      background-color: #FFF;
+    }
+
+
+
+/***********************************\
+  $PHOTO
+\***********************************/
+.camera__photo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  background-image: url(../img/screenshot.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(260%) contrast(130%);
+  visibility: hidden;
+  /* animation: showComponents 0.3s 0.3s ease-out forwards; */
+}
+.smallPhoto {
+  width: 60px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #FFF;
+  position: absolute;
+  left: 11px;
+  bottom: 9.5px;
+  background-image: url(../img/screenshot.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #FFF;
+  z-index: 2;
+  transition: all 0.35s ease-out;
+  visibility: visible;
+  /* animation: showComponents 0.3s 0.3s ease-out forwards; */
+}
+
+
+
+
+
+/***********************************\
+  $OTHER ANIMATIONS
+\***********************************/
+@keyframes showComponents {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.5);
+  }
+  80% {
+    transform: scale(0.7);
+  }
+  90% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
