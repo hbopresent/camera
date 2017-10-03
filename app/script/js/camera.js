@@ -32,7 +32,6 @@
       screenPhoto.style.backgroundPosition = "50% 50%";
       screenPhoto.style.animation = "takeShot 0.2s 0.5s linear forwards";
       setTimeout(function() {
-        // photo.style.animation = "showComponents 0.3s ease-out forwards";
         photo.classList.add("smallPhoto");
       }, 800);
     }
