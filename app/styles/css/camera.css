@@ -7,7 +7,7 @@
   background-color: #000;
 }
 .cameraSvg {
-  stroke: rgba(225, 225, 225, 0.5);
+  stroke: rgba(225, 225, 225, 1);
   stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: miter;
